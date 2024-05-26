@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', (member) => {
 });
 
 bot.on('messageCreate', (message) => {
-    if (message.content.toLowerCase() === '!ping') {
+    if (message.content.toLowerCase() === '/ping') {
         message.reply('Pong!');
     }
 });
@@ -33,5 +33,5 @@ bot.on('ready', () => {
 });
 
 bot.login(process.env.token).then(() => {
-    bot.user.setPresence({ activities: [{ name: 'Caffe', type: 'WATCHING' }], status: 'do not disturb' });
+    bot.user.setPresence({ activities: [{ name: 'Caffe', type: 'WATCHING' }], status: 'online' });
 });
